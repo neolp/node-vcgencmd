@@ -1,28 +1,25 @@
 {
-    "name": "vcgencmd",
-    "version": "0.3.0",
+    "name": "vcgencmdjs",
+    "version": "0.4.1",
     "description": "Native binding for vcgencmd.",
-    "keywords": ["vcgencmd", "Raspberry Pi"],
-    
+    "keywords": [
+        "vcgencmd",
+        "Raspberry Pi"
+    ],
     "main": "vcgencmd.js",
     "scripts": {
         "test": "node test.js"
     },
-    
     "repository": {
         "type": "git",
-        "url": "http://github.com/loyd/node-vcgencmd.git"
+        "url": "http://github.com/neolp/node-vcgencmd.git"
     },
-
-    "author": "Paul Loyd",
+    "author": "Paul Loyd, Alexei Tsigulin",
     "license": "MIT",
-
     "bugs": {
-        "url": "https://github.com/loyd/node-vcgencmd/issues"
+        "url": "https://github.com/neolp/node-vcgencmd/issues"
     },
-
-    "homepage": "https://github.com/loyd/node-vcgencmd",
-
+    "homepage": "https://github.com/neolp/node-vcgencmd",
     "dependencies": {
         "nan": "^2.0.9"
     }
