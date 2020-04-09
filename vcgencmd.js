@@ -25,6 +25,20 @@ exports.throttled = function () {
 
     return ret;
 };
+/*
+Also what resets bits 16 - 18 ? I'm currently running through a battery and notice that the value of the vcgencmd output is:
+throttled=0x50000 but have no idea when the last "has occurred" took place.
+There are designed to be persistent since boot, as that is the only safe way of multiple users being able to read them.
+
+However I did add a secret option.
+Code: Select all
+
+vcgencmd get_throttled 0x7
+Will read a different persistent value, and reset the bitmask specified back to zero.
+Be aware that if multiple scripts start using this, you will be clearing each others results, hence why it is not recommended.
+
+vcgencmd get_throttled (without the bitmask specified) will always give you persistent values since boot (even if you have also been using the bitmask form).
+*/
 
 /**
  * Measure clock frequency.
