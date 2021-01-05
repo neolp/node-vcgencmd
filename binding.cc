@@ -12,7 +12,7 @@ NAN_METHOD(Request) {
     assert(info.Length() >= 1);
     assert(info[0]->IsString());
 
-    v8::Isolate *isolate = args.GetIsolate();
+    v8::Isolate *isolate = info.GetIsolate();
     v8::String::Utf8Value str(isolate, info[0]);
 
     if (vc_gencmd_send(*str) != 0) {
